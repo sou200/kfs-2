@@ -1,0 +1,20 @@
+#ifndef SCREEN_H
+#define SCREEN_H
+
+#include <stdint.h>
+
+#define VGA_WIDTH  80
+#define VGA_HEIGHT 25
+#define NUM_SCREENS 4
+#define VGA_COLOR_WHITE_BLUE  0x1F   // white on blue
+
+void vga_putchar(char c);
+void vga_print(const char *s);
+void vga_clear(void);
+void vga_backspace(void);
+void terminal_switch(int new_screen);
+void terminal_change_color(void);
+void init_terminals(void);
+void puts(const char *s);
+
+#endif
